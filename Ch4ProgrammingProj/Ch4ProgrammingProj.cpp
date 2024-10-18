@@ -27,15 +27,17 @@ int main()
 
     cout << "Please enter the month you want as any number 1-12." << endl;
     cin >> month;
-    cout << "Please enter a year." << endl;
-    cin >> year;
     if (month == 0 || month > 12)
     {
         cout << "Invalid month number.";
         return 1;
     }
+    cout << "Please enter a year." << endl;
+    cin >> year;
+   
 
     int daisyn;
+
     switch (month)
     {case 1: case 3: case 5: case 7: case 8: case 10: case 12:
         daisyn = 31;
