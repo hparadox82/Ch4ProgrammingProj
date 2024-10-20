@@ -23,12 +23,50 @@ int main()
 {
     cout << "Welcome to the Geometry Calculator. Please choose from one of the following: " << endl;
     cout << "1. Calculate a Circle's area\n2. Calculating a Rectangle's area\n3. Calculating a Triangle's area\n4. Quit" << endl;
-    string choice;
+    int choice;
     float area, radius, length, width, base, height;
 
     cin >> choice;
 
-        if(choice)
-    
+    if (choice == 1)
+    {
+        cout << "You have selected to calculate the area of a circle.\nPlease input your radius below." << endl;
+        cin >> radius;
+        if (radius < 0)
+        {
+            cout << "You may not enter negative values. Please try again." << endl;
+            return 0;
+        }
+        cout << "The area of the circle is: " << 3.14159 * pow(radius, 2) << endl;
+    }
+    else if (choice == 2)
+    {
+        cout << "You have selected to calculate a rectangle's area.\nPlease input the length and width below." << endl;
+        cin >> length >> width;
+        if (length < 0 || width < 0)
+        {
+            cout << "You may not enter negative values. Please try again." << endl;
+            return 0;
+        }
+        cout << "The area of your rectangle is: " << length * width << endl;
+    }
+    else if (choice == 3)
+    {
+        cout << "You have selected to calculate a triangle's area.\nPlease input the base and height of your triangle." << endl;
+        cin >> base >> height;
+        if (base < 0 || height < 0)
+        {
+            cout << "You may not enter negative values. Please try again." << endl;
+            return 0;
+        }
+        cout << "The area of your triangle is: " << (base * height) * .5 << endl;
+    }
+    else if (choice == 4)
+    {
+        cout << "Goodbye!" << endl;
+    }
+    else
+        cout << "You have not selected a valid response. Please try again." << endl;
+
     return 0;
 }
