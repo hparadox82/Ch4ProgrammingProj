@@ -49,7 +49,7 @@ int main()
     }
         else
         {
-            cost = rate * ((Dis + 499) / 500.0);
+            cost = rate * ((Dis ) / 500.0);
             cout << "Your shipping charge is estimated to be: " << setprecision(3) <<  cost << endl;
         }
     return 0;
